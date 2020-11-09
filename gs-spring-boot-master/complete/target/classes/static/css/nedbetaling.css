@@ -1,0 +1,13 @@
+.spacing {
+    padding-left: 20vw;
+    padding-right: 30vw;
+}
+
+#top {
+    padding-top: 10vh;
+}
+
+#background {
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, #abdca7 0%, #248e38 50%, #afd91a 100%);
+}

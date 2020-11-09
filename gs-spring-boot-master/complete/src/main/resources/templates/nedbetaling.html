@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Nedbetaling</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="resources/static/css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <link href="resources/static/css/nedbtelaing.css" rel="stylesheet" th:href="@{/css/nedbetaling.css}"/>
+</head>
+    <body id="background">
+        <form id="top" class="spacing" action="#" th:action="@{/nedbetaling/resultat}" th:object="${nedbetalingModel}">
+            <div class="form-group"><p>Dato <input class="form-control" type="date" th:field="*{dato}"></p></div>
+            <div class="form-group"><p>Lån <input class="form-control" type="number" th:field="*{laan}" value="2000000" min="100000" max="100000000"/></p></div>
+            <div class="form-group"><p>Rente: <input class="form-control" min="0" max="100" step="0.01" type="number" th:field="*{rente}" value="3" /></p></div>
+            <div class="form-group"><p>Terminer per år <input class="form-control" type="number" value="12" th:field="*{terminerPerAar}" /></p></div>
+            <div class="form-group"><p>Antall år<input class="form-control" type="number" th:field="*{antallAar}" th:value="25"/></p></div>
+            <div class="form-group"><p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p></div>
+        </form>
+    </body>
+</html>

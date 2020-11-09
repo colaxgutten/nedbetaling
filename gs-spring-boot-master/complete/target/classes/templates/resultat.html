@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Nedbetaling resultat</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="resources/static/css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <link href="resources/static/css/nedbtelaing.css" rel="stylesheet" th:href="@{/css/nedbetaling.css}"/>
+</head>
+<body id="background">
+    <div class="table-responsive">
+        <table class="spacing table">
+            <tr>
+                <th>Restgjeld</th>
+                <th>Dato</th>
+                <th>Innbetaling</th>
+                <th>Gebyr</th>
+                <th>Renter</th>
+                <th>Totalt</th>
+            </tr>
+            <tr th:each="innbetaling : ${nedbetaling}">
+                <td th:text="${innbetaling.restGjeld}">Onions</td>
+                <td th:text="${innbetaling.dato}">2.41</td>
+                <td th:text="${innbetaling.innbetaling}">yes</td>
+                <td th:text="${innbetaling.gebyr}">Onions</td>
+                <td th:text="${innbetaling.renter}">2.41</td>
+                <td th:text="${innbetaling.total}">yes</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
